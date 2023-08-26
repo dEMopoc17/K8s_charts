@@ -1,23 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stacksimpflipynginx
-  namespace: application
+  name: hello-world-deployment
   labels:
-    app: nginx
+    app: hello-world
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: nginx
-  template:
-    metadata:
-      namespace: application
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: stacksimpflipynginx
-        image: stacksimplify/kubenginx:1.0.0
-        ports:
-        - containerPort: 80
+      app: hello-world
+  replicas: 2
