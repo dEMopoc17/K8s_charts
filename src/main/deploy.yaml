@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  namespace: application
+  name: stacksimpflipynginx
+  namespace: app
   labels:
     app: nginx
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
   template:
     metadata:
-      namespace: application
+      namespace: app
       labels:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: stacksimpflipynginx
+        image: stacksimplify/kubenginx:1.0.0
         ports:
         - containerPort: 80
