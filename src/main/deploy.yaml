@@ -2,11 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: stacksimpflipynginx
-  namespace: application
+  namespace: applicatio
   labels:
     app: nginx
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: nginx
