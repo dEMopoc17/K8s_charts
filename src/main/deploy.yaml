@@ -12,7 +12,7 @@ spec:
       app: nginx
   template:
     metadata:
-      namespace: application
+      namespace: applicatio
       labels:
         app: nginx
     spec:
